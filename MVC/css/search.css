@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: asap, san-sherif;
+}
+
+.oculto {
+	display: none;
+}
+
+.img {
+	width: 100%;
+}
+
+body {
+	background-image: url(../imgs/background.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+header {
+	margin-bottom: 5%;
+}
+
+ul {
+    display: flex;
+    margin: 1% 0 0 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+	margin: 0 20px;
+}
+
+ul li a {
+    position: relative;
+    display: block;
+    padding: 8px 15px;
+    text-align: center;
+    font-size: 14px;
+	font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #262626;
+    transition: .5s;
+}
+
+ul li span {
+	position: relative;
+    display: block;
+    padding: 8px 15px;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #262626;
+}
+
+ul li a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 2px;
+    background: #262626;
+    transform: scaleX(0);
+    z-index: -1;
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+ul li a:hover:before {
+    transform: scaleX(1);
+    transform-origin: left
+}
+
+ul li a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    width: 100%;
+    height: 2px;
+    background: #262626;
+    transform: scaleX(0);
+    z-index: -1;
+    transform-origin: left;
+    transition: transform .5s;
+}
+
+ul li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: right
+}
+
+.menu {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 1%;
+}
+
+.login {
+	position: relative;
+	top: -50px;
+	left: -5px;
+	margin-left: 80%;
+	padding: 1%;
+	text-align: end;
+}
+
+.saludo {
+	position: relative;
+    top: -23px;
+    right: 22px;
+	margin-left: 90%;
+	font-size: 12px;
+	text-align: end;
+	width: 10%;
+}
+
+.imagen {
+	width: 155px;
+	margin: auto;
+}
+
+.imagen > img {
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.imagen > img:hover {
+	box-shadow: 0 0 10px black;
+}
+
+.busqueda {
+	display: flex;
+	justify-content: center;
+}
+
+.results {
+	display: inline-block;
+	width: 100%;
+	margin-top: 2%;
+}
+
+.result {
+	width: 20%;
+	margin-top: 3%;
+	float: left;
+	text-align: center;
+}
+
+.result > p > span {
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.result > p > span:hover {
+	font-weight: bold;
+	text-shadow: 0 0 1px black;
+}
+
+.not_found {
+	width: 100%;
+	margin-top: 5%;
+	text-align: center;
+}
+
+.not_found > p {
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+}

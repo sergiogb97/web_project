@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: asap, san-sherif;
+}
+
+.img {
+	width: 100%;
+}
+
+.oculto {
+	display: none;
+}
+
+.options {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.add_form {
+	margin: auto;
+	padding: 4px 6px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	border: 2px solid #1d90b3;
+	border-radius: 0 15px 0 15px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.add_form:hover {
+	background-color: #1d90b3;
+	color: white;
+}
+
+.form {
+	width: 60%;
+	margin: auto;
+	margin-top: 60px;
+	margin-bottom: 60px;
+	background: white;
+	padding: 50px;
+}
+
+.over_form {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	overflow-y: scroll;
+	width: 100%;
+	height: 100%;
+	background-color: #000000CC;
+}
+
+.data_form {
+	text-align: center;
+}
+
+body {
+	background-image: url(../imgs/background.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+header {
+	margin-bottom: 5%;
+}
+
+ul {
+    display: flex;
+    margin: 1% 0 0 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+	margin: 0 20px;
+}
+
+ul li a {
+    position: relative;
+    display: block;
+    padding: 8px 15px;
+    text-align: center;
+    font-size: 14px;
+	font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #262626;
+    transition: .5s;
+}
+
+ul li span {
+	position: relative;
+    display: block;
+    padding: 8px 15px;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #262626;
+}
+
+ul li a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 2px;
+    background: #262626;
+    transform: scaleX(0);
+    z-index: -1;
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+ul li a:hover:before {
+    transform: scaleX(1);
+    transform-origin: left
+}
+
+ul li a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    width: 100%;
+    height: 2px;
+    background: #262626;
+    transform: scaleX(0);
+    z-index: -1;
+    transform-origin: left;
+    transition: transform .5s;
+}
+
+ul li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: right
+}
+
+button {
+	width: 20px;
+	height: 20px;
+	background-color: #000000c7;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+table {
+	text-align: center;
+	border-collapse: collapse;
+	margin: auto;
+	width: 100%;
+}
+
+th {
+	padding: 2px 0 15px;
+}
+
+td {
+	padding: 2px;
+}
+
+tbody > tr {
+	transition: all 0.5s ease;
+}
+
+tbody > tr:hover {
+	background-color: #b6e7f875;
+}
+
+.table {
+	margin: 30px 100px 0;
+	background-color: #2f9ebc45;
+	border-radius: 0 50px 0 50px;
+	padding: 20px 50px;
+}
+
+.paginacion {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.paginacion > a {
+	margin: 1%;
+}
+
+.pagina {
+	margin: 1%;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: 2px solid #115468;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.pagina_actual {
+	margin: 1%;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: 2px solid #115468;
+	background-color: #115468;
+}
+
+.pagina:hover {
+	background-color: #115468;
+}
+
+.menu {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 1%;
+}
+
+.saludo {
+	position: relative;
+    top: -23px;
+    right: 22px;
+	margin-left: 90%;
+	font-size: 12px;
+	text-align: end;
+	width: 10%;
+}
+
+.verificar {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #000000CC;
+}
+
+.ask {
+	position: absolute;
+	top: 30%;
+	left: 40%;
+	padding: 20px 30px;
+	background-color: white;
+	border-radius: 20px;
+}
+
+.ask > p {
+	margin: auto;
+}
+
+.choice {
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+}
+
+.yes {
+	margin: auto;
+	padding: 2px 5px;
+	border: 3px solid crimson;
+	border-radius: 20px;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.yes:hover {
+	background-color: crimson;
+	color: white;
+}
+
+.no {
+	margin: auto;
+	padding: 2px 5px;
+	border: 3px solid #1d90b3;
+	border-radius: 20px;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.no:hover {
+	background-color: #1d90b3;
+	color: white;
+}
